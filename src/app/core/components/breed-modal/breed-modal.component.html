@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{ data.name }}</h2>
+<mat-dialog-content>
+        <img class="breed-img" [src]="data.image.url" alt="{{ data.name }}">
+        <p><strong>Origin:</strong> {{ data.origin }}</p>
+        <p><strong>Life expectancy:</strong> {{ data.life_span }}</p>
+        <p><strong>Weight:</strong> {{ data.weight.metric }} kg</p>
+        <p><strong>Height:</strong> {{ data.height.metric }} cm</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

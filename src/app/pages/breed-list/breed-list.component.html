@@ -1,0 +1,18 @@
+<body>
+    <div class="content">
+        @if (breeds$ | async; as breeds) {
+        <div class="breed-list">
+            @for (breed of breeds; track $index) {
+            <div class="breed-item" (click)="openDialog(breed)">
+                <app-breed-item [breed]="breed"></app-breed-item>
+            </div>
+            }
+        </div>
+        }
+    </div>
+    <div class="paginator">
+        <mat-paginator [length]="total" [pageSize]="pageSize" (page)="handlePage($event)"
+            [pageSizeOptions]="[5, 10, 20, 50]" aria-label="Select page">
+        </mat-paginator>
+    </div>
+</body>
